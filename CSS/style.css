@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 h1{

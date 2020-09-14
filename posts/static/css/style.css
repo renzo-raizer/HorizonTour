@@ -1,0 +1,64 @@
+.container-fluid{
+    padding: 0;
+}
+
+
+/* navbar */
+
+.pull-right {
+    float: right
+}
+.ul{
+    float:right;
+ }
+.navbar{
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color:#333;
+    letter-spacing: 1px;
+}
+
+/* login */
+
+.footer {
+    background-color: #333;
+    height: 300px;
+    border-top: 2px solid #202020;
+}
+
+footer p{
+    color: white;
+    text-align:center;
+    top:50%;
+    position: relative;
+}
+
+
+/*Carousel*/
+
+.carousel-thumbnails .carousel-indicators img {
+    max-width: 100px;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+}
+
+
+.carousel-thumbnails .carousel-indicators li {
+    height: auto;
+    max-width: 100px;
+    width: 100px;
+    border: none;
+	box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+	
+	&.active {
+		border-bottom: 4px solid #fff;
+	}
+}

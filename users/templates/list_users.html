@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% for usuario in usuarios %}
+            <a href="{% url 'update_users' usuario.id %}">
+                <li> {{ usuario.username }}</li>
+               <!-- <li> {{ product.price }}</li> -->
+            </a>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_users' %}">Cadastrar Usuario</a>
+    {% endblock %}

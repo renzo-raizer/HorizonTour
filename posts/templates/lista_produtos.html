@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de Produtos</h1>
+    <ul>
+        {% for post in posts %}
+            <p href="{% url 'home' %}">
+                <li> <a href="{% url 'access_produto' post.id %}">{{ post.titulo }}</a></li>
+                <li> {{ post.descricao }}</li>
+                <li> R$ {{ post.preco }}</li>
+                <hr>
+            </p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Produto {% endblock %}
+{% block content %}
+
+    <h1>{{ posts.titulo }} </h1>
+
+    <ul>
+        <p>
+            {% csrf_token %}
+            <li> {{ posts.descricao }}</li>
+            <li> R$ {{ posts.preco }}</li>
+            <hr>
+        </p>
+    </ul>
+{% endblock %}

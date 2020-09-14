@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class= "container-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #f7b600;">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Logo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/produtos/">Produtos</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/perfil/">Perfil</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Nós</a>
+             </li>
+         </ul>
+        </div>
+       <div class="mx-auto order-0">
+           <a class="navbar-brand mx-auto" href="#">HorizonTour</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+            <li class="nav-link text-align-right">Bem-vindo de volta, {{ user.first_name }}  
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/accounts/logout">Logout</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+               <a class="nav-link" href="/accounts/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/register/">Cadastre-se</a>
+            </li>
+          {% endif %}
+          </ul>
+        </div>
+      </nav>
+      {% block content %}          {% endblock %}
+      <footer>
+          <p></p>
+      </footer>
+    </div>
+    <script 
+      src="https://code.jquery.com/jquery-3.4.0.min.js"  
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"></script>
+    <script 
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" 
+      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
+      crossorigin="anonymous">
+    </script>
+    <script src="{% static 'js/scripts.js' %}">
+    </script>
+</body>
+</html>

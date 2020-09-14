@@ -43,6 +43,9 @@ footer p{
 
 /*Carousel*/
 
+.bemvindo{ text-decoration:black;
+}
+
 .carousel-thumbnails .carousel-indicators img {
     max-width: 100px;
     height: 50px;
@@ -58,7 +61,4 @@ footer p{
     border: none;
 	box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
 	
-	&.active {
-		border-bottom: 4px solid #fff;
-	}
 }

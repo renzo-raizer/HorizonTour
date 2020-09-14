@@ -2,7 +2,9 @@
 {% block title %} Home Page {% endblock %}
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>Lista de Produtos</h1>
+    <p>
+        <h1>Lista de Produtos</h1>
+    </p>
     <ul>
         {% for post in posts %}
             <p href="{% url 'home' %}">

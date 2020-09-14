@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid">
-    <p><h1>Perfil do Usuário </h1></p>
+<div class="offset-1 col-10 list-div">
+    <p>
+        <h1>Perfil de {{ user.first_name }}  </h1>
+    </p>
     <div class="btn-group" role="group" aria-label="Grupo de botões com dropdown aninhado">
         <a href="/accounts/delete/"><button type="submit" class="btn btn-secondary">Delete</button></a>
         <a href="/accounts/update/"><button type="submit" class="btn btn-secondary">Update</button></a>

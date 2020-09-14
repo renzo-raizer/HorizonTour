@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
-class Posts(models.Model):
+class Postagens(models.Model):
     titulo = models.CharField(max_length=100)
     descricao = models.TextField()
     preco = models.DecimalField(max_digits=5, decimal_places=2)

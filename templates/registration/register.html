@@ -15,10 +15,10 @@
                     <input type="hidden" name="next" value="{{ next }}">
         
                     {{ form|crispy }}
-
+                    
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
                     <button type="submit" class="btn btn-primary btn-block">Registrar</button>
                 </form>
-
                 <p class="change-form-p text-center">Já possui uma conta? <a href="/accounts/login">Clique aqui!</a></p>
             </div>
         </div>

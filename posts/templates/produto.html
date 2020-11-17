@@ -2,14 +2,15 @@
 {% block title %} Produto {% endblock %}
 {% block content %}
 
+<div class="container">
+    <div class="row mx-lg-n5">
     <h1>{{ posts.titulo }} </h1>
 
-    <ul>
         <p>
             {% csrf_token %}
-            <li> {{ posts.descricao }}</li>
-            <li> R$ {{ posts.preco }}</li>
+            {{ posts.descricao }}
+            <br>
+            R$ {{ posts.preco }}
             <hr>
         </p>
-    </ul>
 {% endblock %}

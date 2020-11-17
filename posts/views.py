@@ -13,4 +13,5 @@ def lista_produtos (request):
 
 def access_produto (request, id):
     posts = Postagens.objects.get(id=id)
+    
     return render(request, 'produto.html', {'posts': posts})

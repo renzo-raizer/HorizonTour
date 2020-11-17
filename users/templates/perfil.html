@@ -1,12 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <p>
         <h1>Perfil de {{ user.first_name }}  </h1>
     </p>
-    <div class="btn-group" role="group" aria-label="Grupo de botões com dropdown aninhado">
-        <a href="/accounts/delete/"><button type="submit" class="btn btn-secondary">Delete</button></a>
-        <a href="/accounts/update/"><button type="submit" class="btn btn-secondary">Update</button></a>
+    <div class="container">
+        Nome Completo
+        <form>
+        <input class="form-control" value="{{ user.first_name }} {{ user.last_name }}" readonly=disabled>
+        <br>
+        E-mail
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ user.email }}" readonly=disabled>
+        <br>
+        CEP
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.CEP }}" readonly=disabled>
+        <br>
+        Endereço
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.endereco }}" readonly=disabled>
+        <br>
+        Numero
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.numero }}" readonly=disabled>
+        <br>
+        Complemento
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.complemento }}" readonly=disabled>
+        <br>
+        Bairro
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.bairro }}" readonly=disabled>
+        <br>
+        Cidade
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.cidade }}" readonly=disabled>
+        <br>
+        Estado
+        <br>
+        <input class="form-control form-lg-sm" type=text value="{{ endereco.estado }}" readonly=disabled>
+        
+    </form>
+    </div>
+    <br>
+    <div class="row mx-md-n5">
+        <div class="col py-3 px-md-5">
+            <a href="/accounts/delete/"><button type="submit" class="btn btn-secondary">Deletar Conta</button></a>
+            <a href="/accounts/update/"><button type="submit" class="btn btn-secondary">Editar Perfil</button></a>
+        </div>
+        
     </div>
 </div>
 {% endblock %}

@@ -1,10 +1,10 @@
-{% extends  'base.html' %}
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %}Entrar{% endblock %}
 
 {% block content %}
-
+{% load static %}
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <div class="card  auth-card">
@@ -16,14 +16,21 @@
 
                     <input type="hidden" name="next" value="{{ next }}">
                     {{ form|crispy }}
+                    
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
 
-                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    <button type="submit" class="text-white btn btn-block bg-dark text-center">Entrar</button>
                 </form>
-
-                <p class="change-form-p text-center">Quer criar uma conta? <a href="/accounts/register">Clique aqui!</a></p>
+                <p></p>
+                <span>
+                    <a href="{% url 'social:begin' 'facebook' %}?next={{ home }}" class="btn btn-block btn-social btn-primary btn-sm text-center text-white">Entre com o Facebook</a>
+                    <a href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ home }}" class="btn btn-block btn-social btn-sm btn-secondary text-center text-white">Entre com o Linkedin</a>
+                </span>
+                <br>
+                <p class="change-form-p text-center">Quer criar uma conta? <a href="/accounts/register">Clique aqui!</a></p> 
+                
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}

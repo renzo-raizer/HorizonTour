@@ -1,20 +1,29 @@
 {% extends 'base.html' %}
+
 {% block title %} Home Page {% endblock %}
 {% block content %}
-<div class="offset-1 col-10 list-div">
-    <p>
+    <div class="container">
         <h1>Lista de Produtos</h1>
-    </p>
-    <ul>
-        {% for post in posts %}
-            <p href="{% url 'home' %}">
-                <li> <a href="{% url 'access_produto' post.id %}">{{ post.titulo }}</a></li>
-                <li> {{ post.descricao }}</li>
-                <li> R$ {{ post.preco }}</li>
-                <hr>
-            </p>
-        {% endfor %}
-    </ul>
-</div>
+        <hr>
+    </div>
+    <br>
+        <div class="container">
+            <div class="row mx-lg-n5">
+                {% for post in posts %}
+              <div class="col-4">
+                <p href="{% url 'home' %}">
+                    <br>
+                    <a href="{% url 'access_produto' post.id %}">{{ post.titulo }}</a></li>
+                    <br>
+                    {{ post.descricao }}
+                    <br>
+                    <br>
+                    R$ {{ post.preco }}
+
+                </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
 {% endblock %}
 

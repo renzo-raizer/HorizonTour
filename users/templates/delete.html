@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
     {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        <h2>Tem certeza que deseja remover {{ user.username }} ?</h2>
-        <button type="submit">Confirmar</button>
-    </form>
+    <h2>Tem certeza que deseja remover {{ user.first_name }} {{ user.last_name }} ?</h2>
+    <div class="row mx-md-n5">
+        <div class="col py-3 px-md-5">
+            <form method="post">
+            {% csrf_token %}
+            <button type="submit"class="btn btn-secondary">Confirmar</button>
+            <a href="/accounts/perfil/"><button type="button" class="btn btn-secondary">Voltar</button></a>
+            </form>
+        </div>
+        
+    </div>    
     {% endblock %}

@@ -7,4 +7,5 @@ urlpatterns = [
     path('delete/', del_perfil, name='del_perfil'),
     path('update/', update, name= 'update_user'),
     path('perfil/', perfil, name='perfil'),
+    path('perfil/', perfil, name='endereco'),    
 ]

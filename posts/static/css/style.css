@@ -1,3 +1,6 @@
+div.fb-login-button.fb_iframe_widget_fluid{ display: block !important; }
+div.fb-login-button.fb_iframe_widget_fluid span, div.fb-login-button.fb_iframe_widget_fluid span iframe { width: 100% !important; }
+
 .container-fluid{
     padding: 0;
 }
@@ -40,6 +43,36 @@ footer p{
     position: relative;
 }
 
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-social:hover {
+    color: #eee;
+}
+
+.btn-social :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    padding: 7px;
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
 
 /*Carousel*/
 
@@ -61,4 +94,62 @@ footer p{
     border: none;
 	box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
 	
+}
+body{
+	font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#area-principal{
+	width: 920px;
+	margin: 0 auto;
+    padding: 15px;
+}
+
+#area-postagens{
+	width: 660px;
+	float: left;
+}
+
+.postagem{
+	padding: 20px;
+	margin-bottom: 20px;
+	background: white;
+}
+
+#rodape{
+	clear: both;
+	text-align: center;
+	padding: 15px;
+	background: #CCC
+}
+
+a{
+	text-decoration: none;
+}
+
+a:link, a:visited{
+	color: #f7b600;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+h2{
+	color: #f7b600;
+}
+
+a.fb {
+    font-family: Lucida Grande, Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    padding: 13px 30px 15px 44px;
+    background: #3A5A97;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,20,.4);
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    border-radius: 5px;
 }

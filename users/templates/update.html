@@ -8,10 +8,12 @@
         <div class="card  auth-card">
             <div class="card-body">
                 <h4 class="card-title text-center">Atualize seus dados</h4>
-                    <form method="post">
+                    <form method="post">   
                         {% csrf_token %}
+                            
                         <input type="hidden" name="next" value="{{ next }}">
                         {{ form|crispy }}
+                        {{ form2|crispy }}
                     <button type="submit">Atualizar</button>
                     </form>
 {% endblock %}
